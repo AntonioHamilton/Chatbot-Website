@@ -1,0 +1,1 @@
+// Arquivo para funções de serviço (ex: chamadas de API)

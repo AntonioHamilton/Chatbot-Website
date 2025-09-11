@@ -1,0 +1,82 @@
+@use 'variables';
+@use 'sass:math';
+@use 'sass:string';
+
+$twinkle-base-duration: 16s;
+
+@function random_range($min, $max) {
+  @return $min + math.floor(math.random() * ($max - $min + 1));
+}
+
+@function multiple-box-shadow($n, $color) {
+  $value: '#{random_range(0, 3000)}px #{random_range(0, 3000)}px #{$color}';
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{random_range(0, 3000)}px #{random_range(0, 3000)}px #{$color}';
+  }
+  @return string.unquote($value);
+}
+
+.animationWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: variables.$background-primary;
+  overflow: hidden;
+
+  img {
+    opacity: 0.1;
+    position: absolute;
+  }
+}
+
+.starsSmall,
+.starsMedium,
+.starsLarge {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  animation: twinkle linear infinite;
+}
+
+.starsSmall {
+  $shadows: multiple-box-shadow(2000, variables.$text-secondary);
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows;
+  animation-duration: $twinkle-base-duration;
+}
+
+.starsMedium {
+  $shadows: multiple-box-shadow(500, variables.$text-primary);
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows;
+  animation-duration: calc(#{$twinkle-base-duration} * 0.75);
+  animation-delay: -2s;
+}
+
+.starsLarge {
+  $shadows: multiple-box-shadow(300, variables.$text-primary);
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows;
+  animation-duration: calc(#{$twinkle-base-duration} * 0.5);
+  animation-delay: -4s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}

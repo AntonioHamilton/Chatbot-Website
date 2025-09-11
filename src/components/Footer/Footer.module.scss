@@ -1,0 +1,36 @@
+@use 'variables';
+
+.footer {
+  position: fixed;
+  width: 100%;
+  padding: 12px 5%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: variables.$text-secondary;
+
+  &__copyright {
+    font-size: 0.9rem;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      color: variables.$text-secondary;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: variables.$gold-400;
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

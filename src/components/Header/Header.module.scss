@@ -1,0 +1,94 @@
+@use 'variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 5%;
+  color: variables.$text-primary;
+
+  &__logo {
+    font-family: 'Londrina Sketch', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    a {
+      color: variables.$text-primary;
+      text-decoration: none;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  &__navLink {
+    color: variables.$text-secondary;
+    text-decoration: none;
+    position: relative;
+    font-size: 1rem;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: variables.$text-primary;
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      bottom: 0;
+      left: 0;
+      background-color: variables.$gold-400;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &--active {
+      color: variables.$gold-400;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      &:hover {
+        color: variables.$gold-400;
+      }
+    }
+  }
+
+  &__languageSelector {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__languageButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: filter 0.2s ease-in-out;
+    filter: brightness(0.7);
+
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use 'variables';
+
+.card {
+  color: variables.$text-primary;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  flex-direction: row;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: none;
+  background-color: none;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: rgba(230, 230, 230, 0.02);
+    box-shadow:
+      1px 1px 1px rgba(255, 255, 255, 0.1),
+      -1px -1px 1px rgba(0, 0, 0, 0.1);
+
+    .card__info-container h3 {
+      color: #00ffaa;
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    color: variables.$text-tertiary;
+    margin-top: 4px;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: variables.$text-primary;
+      text-decoration: none;
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    li {
+      font-size: 14px;
+      color: variables.$text-tertiary;
+    }
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    gap: 8px;
+  }
+
+  &__badge {
+    margin-top: 4px;
+    background-color: rgba(0, 255, 170, 0.15);
+    box-shadow:
+      1px 1px 2px rgba(0, 255, 170, 0.25),
+      -1px -1px 2px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 255, 170);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

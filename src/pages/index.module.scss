@@ -1,0 +1,40 @@
+@use 'variables';
+
+.home {
+  height: 82vh;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    color: variables.$text-primary;
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-family: 'Wendy One';
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    background: rgba(0, 255, 170, 0.15);
+    color: #00ffaa;
+    border-radius: 20px;
+    padding: 8px 16px;
+    box-shadow:
+      1px 1px 2px rgba(0, 255, 170, 0.25),
+      -1px -1px 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background: rgba(0, 255, 170, 0.253);
+    }
+  }
+}
