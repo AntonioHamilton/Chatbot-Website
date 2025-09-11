@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from 'src/types/Project';
 import styles from './ProjectCard.module.scss';
+import { GithubIcon } from '../Icons/GithubIcon';
 
 export const ProjectCard = ({
   title,
@@ -22,7 +23,17 @@ export const ProjectCard = ({
     <div className={styles['project-card__content']}>
       <h3>{title}</h3>
       <p>{description}</p>
-      <p>{github}</p>
+      {github && (
+        <Link
+          className={styles['project-card__github']}
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`github ${title}`}
+        >
+          <GithubIcon className={styles['project-card__icon']} />
+        </Link>
+      )}
       <div className={styles['project-card__badges']}>
         {badges.map((badge) => (
           <span key={badge} className={styles['project-card__badge']}>

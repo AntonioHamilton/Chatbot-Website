@@ -3,9 +3,27 @@ import { Project } from 'src/types/Project';
 export const projects: Record<string, Project[]> = {
   EN_US: [
     {
+      title: 'Anotei',
+      description:
+        'Pop culture content management app that helps users organize and track their favorite TV shows, movies, anime, and books all in one place',
+      image: '/images/projects/anotei.png',
+      link: 'https://anotei-ten.vercel.app/',
+      badges: ['React Native', 'TypeScript', 'Styled-Components', 'Expo'],
+      github: 'https://github.com/AntonioHamilton/Anotei',
+    },
+    {
+      title: 'Money Legends',
+      description:
+        'Created for the final project of the Information Systems course. It is a software engineering and AI project that aims to evaluate the win rate of League of Legends teams. It does this using a regressive random forest (a machine learning algorithm)',
+      image: '/images/projects/moneylegends.png',
+      link: 'https://money-legends.vercel.app/login',
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
+      github: 'https://github.com/AntonioHamilton/money-legends',
+    },
+    {
       title: 'Universe Project',
       description:
-        "This was a project designed for my university's database classes. I worked on it with my friend Yves, and the main proposal was to display planets, stars, and moons in our galaxy.",
+        "This was a project designed for my university's database classes. I worked on it with my friend Yves, and the main proposal was to display planets, stars, and moons in our galaxy",
       image: '/images/projects/universeproject.png',
       link: 'https://universeproject.vercel.app/',
       badges: ['React', 'MongoDB', 'Node.js', 'Express.js'],
@@ -14,7 +32,7 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Ioasys Challenge',
       description:
-        "Project developed for the Ioasys Company challenge interview. The idea was to create a login page and a book catalog on the app's home screen.",
+        "Project developed for the Ioasys Company challenge interview. The idea was to create a login page and a book catalog on the app's home screen",
       image: '/images/projects/ioasyschallenge.png',
       link: 'https://desafio-books-frontend-omega.vercel.app/',
       badges: [
@@ -28,6 +46,24 @@ export const projects: Record<string, Project[]> = {
     },
   ],
   PT_BR: [
+    {
+      title: 'Anotei',
+      description:
+        'Aplicativo gratuito de gerenciamento de conteúdo da cultura pop que ajuda os usuários a organizar e acompanhar seus programas de TV, filmes, animes e livros favoritos em um só lugar',
+      image: '/images/projects/anotei.png',
+      link: 'https://anotei-ten.vercel.app/',
+      badges: ['React Native', 'TypeScript', 'Styled-Components', 'Expo'],
+      github: 'https://github.com/AntonioHamilton/Anotei',
+    },
+    {
+      title: 'Money Legends',
+      description:
+        'Criado para o trabalho de conclusão do curso de Sistemas de Informação. É um projeto de engenharia de software e IA que tem como objetivo avaliar a taxa de vitória de times de League of Legends, ele faz isso a partir de um random forest regressivo (algoritmo de machine learning)',
+      image: '/images/projects/moneylegends.png',
+      link: 'https://money-legends.vercel.app/login',
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
+      github: 'https://github.com/AntonioHamilton/money-legends',
+    },
     {
       title: 'Universe Project',
       description:

@@ -23,6 +23,21 @@
     object-fit: cover;
   }
 
+  &__github {
+    margin-top: 4px;
+    color: variables.$text-secondary;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: variables.$gold-400;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
   &:hover {
     background-color: rgba(230, 230, 230, 0.02);
     box-shadow:
