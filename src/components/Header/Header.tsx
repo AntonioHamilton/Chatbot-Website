@@ -26,7 +26,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.header__logo}>
         <Link href="/">
-          <span>CHATBOT</span>
+          <span>CHAT</span>
         </Link>
       </div>
 

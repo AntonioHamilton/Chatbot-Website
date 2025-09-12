@@ -1,5 +1,5 @@
 const PT_BR = {
-  home: 'Bem-vindo ao meu website, meu nome é Antônio Hamilton, e apesar de não ser uma IA meus amigos me chamam de Chatbot.',
+  home: 'Bem-vindo ao meu website, meu nome é Antônio Hamilton, e apesar de não ser uma IA meus amigos me chamam de Chat.',
   my_projects: 'Meus projetos',
   more_about_me: 'Mais sobre mim',
   about: (
@@ -28,7 +28,7 @@ const PT_BR = {
 };
 
 const EN_US = {
-  home: `Hi, welcome to my website, my name is Antonio Hamilton, I'm not a AI but my friends know me as Chatbot.`,
+  home: `Hi, welcome to my website, my name is Antonio Hamilton, I'm not a AI but my friends know me as Chat.`,
   more_about_me: 'More about me',
   my_projects: 'My projects',
   about: (
