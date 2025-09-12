@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useTranslation } from 'src/hooks/useTranslation';
 import styles from './Header.module.scss';
-import { FloatingMenu } from '../HamburgerMenu/FloatingMenu';
+import { FloatingMenu } from '../FloatingMenu/FloatingMenu';
 
 const navLinks: Record<string, any>[] = [
   { name: { PT_BR: 'Início', EN_US: 'Home' }, path: '/' },
@@ -76,7 +76,7 @@ export const Header = () => {
         </button>
       </div>
 
-      <FloatingMenu />
+      <FloatingMenu path={router.pathname} />
     </header>
   );
 };
