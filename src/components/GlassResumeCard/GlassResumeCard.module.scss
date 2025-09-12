@@ -29,15 +29,31 @@
   }
 
   &__time {
+    display: block;
     font-size: 14px;
     color: variables.$text-tertiary;
     margin-top: 4px;
+
+    @media (max-width: variables.$sm) {
+      display: none;
+    }
   }
 
   &__info-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    p {
+      display: none;
+      font-size: 14px;
+      color: variables.$text-tertiary;
+      margin-top: 4px;
+
+      @media (max-width: variables.$sm) {
+        display: block;
+      }
+    }
 
     h3 {
       font-size: 18px;

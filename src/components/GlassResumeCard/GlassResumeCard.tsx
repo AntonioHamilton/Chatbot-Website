@@ -18,7 +18,8 @@ export const GlassResumeCard = ({
   >
     <div className={styles.card__time}>{time}</div>
     <div className={styles['card__info-container']}>
-      <h3>{title}</h3>
+      <h3>{title} </h3>
+      <p>{time}</p>
       <div>{description}</div>
       <div className={styles.card__badges}>
         {badges.map((badge) => (

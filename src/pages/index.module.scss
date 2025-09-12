@@ -19,6 +19,10 @@
   &__links {
     display: flex;
     gap: 16px;
+
+    @media (max-width: variables.$md) {
+      display: none;
+    }
   }
 
   &__link {

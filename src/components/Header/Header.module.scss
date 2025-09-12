@@ -23,6 +23,10 @@
     flex-grow: 1;
     display: flex;
     justify-content: center;
+
+    @media (max-width: variables.$md) {
+      display: none;
+    }
   }
 
   &__navList {

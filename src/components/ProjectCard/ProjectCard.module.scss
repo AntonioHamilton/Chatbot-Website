@@ -15,18 +15,30 @@
   cursor: pointer;
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media (max-width: variables.$sm) {
+    grid-template-columns: 1fr;
+  }
+
   img {
     margin-top: 0px;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     object-fit: cover;
+
+    @media (max-width: variables.$sm) {
+      justify-self: center;
+    }
   }
 
   &__github {
+    width: fit-content;
+    background: none;
+    border: none;
     margin-top: 4px;
     color: variables.$text-secondary;
     transition: color 0.2s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       color: variables.$gold-400;
@@ -58,6 +70,10 @@
     flex-direction: column;
     gap: 4px;
 
+    @media (max-width: variables.$sm) {
+      text-align: center;
+    }
+
     h3 {
       font-size: 18px;
       font-weight: 600;
@@ -75,6 +91,10 @@
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(80px, auto));
     gap: 8px;
+
+    @media (max-width: variables.$sm) {
+      justify-content: center;
+    }
   }
 
   &__badge {

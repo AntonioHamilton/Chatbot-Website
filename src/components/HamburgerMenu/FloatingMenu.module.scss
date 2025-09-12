@@ -1,0 +1,118 @@
+@use 'variables'; // Assumindo que você tem um arquivo de variáveis SCSS
+
+.floatingMenu {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: variables.$blue-500;
+  padding: 15px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: variables.$md) {
+    display: flex;
+  }
+
+  @media (max-width: variables.$sm) {
+    bottom: 50px;
+  }
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; // Os itens vão em linha
+  align-items: center;
+  gap: 25px; // Espaçamento entre os ícones/rótulos
+}
+
+.menuItem {
+  // Estilos específicos para cada item, se necessário
+}
+
+.menuLink {
+  display: flex;
+  flex-direction: column; // Ícone acima do texto
+  align-items: center;
+  text-decoration: none;
+  color: variables.$text-secondary; // Cor padrão do texto e ícone
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: variables.$gold-400; // Ou outra cor de destaque para hover
+  }
+
+  &--active {
+    // Classe para o item ativo (ex: Home selecionado)
+    color: variables.$gold-400; // Cor para o item ativo
+    .iconPlaceholder,
+    .linkText {
+      // Estilos adicionais para o item ativo, como um pequeno ponto acima do ícone
+    }
+  }
+}
+
+.iconPlaceholder {
+  font-size: 1.8rem; // Tamanho do ícone
+  margin-bottom: 5px; // Espaço entre o ícone e o texto
+}
+
+.linkText {
+  font-size: 0.8rem; // Tamanho do texto do rótulo
+  font-weight: 500;
+  text-transform: uppercase; // Opcional: deixar em maiúsculas
+}
+
+/* Adicione aqui um pseudo-elemento para o pequeno círculo no topo */
+
+/* --- Estilos Responsivos --- */
+
+// Para telas menores, ajuste o padding e talvez o tamanho dos ícones/textos
+@media (max-width: 600px) {
+  .floatingMenu {
+    padding: 12px 15px;
+    max-width: 95%;
+  }
+
+  .menuList {
+    gap: 15px; // Menos espaço entre os itens
+  }
+
+  .iconPlaceholder {
+    font-size: 1.5rem;
+  }
+
+  .linkText {
+    font-size: 0.7rem;
+  }
+
+  .floatingMenu::before {
+    top: -12px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menuList {
+    gap: 10px;
+  }
+  .iconPlaceholder {
+    font-size: 1.3rem;
+  }
+  .linkText {
+    font-size: 0.65rem;
+  }
+}

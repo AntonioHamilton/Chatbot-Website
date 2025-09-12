@@ -16,6 +16,11 @@
     grid-template-columns: 1fr 1.25fr;
     margin-top: 36px;
     margin-bottom: 50px;
+
+    @media (max-width: variables.$md) {
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__presentation {
@@ -25,6 +30,13 @@
     top: 17vh;
     width: 35%;
     text-align: left;
+
+    @media (max-width: variables.$md) {
+      top: 0;
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
 
     p {
       margin-bottom: 12px;

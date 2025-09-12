@@ -18,3 +18,10 @@ $purple-500: #432d73;
 $magenta-500: #8c2756;
 $gold-400: #f2c94c;
 $gold-500: #e6a209;
+
+/* Breakpoints */
+$xs: 320px; // (smaller phone viewpoints);
+$sm: 480px; // (smaller tablet viewpoints);
+$md: 768px; // (most tablets);
+$lg: 992px; // (smaller desktops);
+$xl: 1200px; // (large devices and wide screens);
