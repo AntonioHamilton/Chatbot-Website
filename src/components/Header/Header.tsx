@@ -10,7 +10,10 @@ const navLinks: Record<string, any>[] = [
   { name: { PT_BR: 'Início', EN_US: 'Home' }, path: '/' },
   { name: { PT_BR: 'Sobre', EN_US: 'About' }, path: '/about' },
   { name: { PT_BR: 'Projetos', EN_US: 'Projects' }, path: '/projects' },
-  // { name: { PT_BR: 'Blog', EN_US: 'Blog' }, path: '/blog' },
+  {
+    name: { PT_BR: '4Fun', EN_US: '4Fun' },
+    path: 'https://chat-4-fun.vercel.app/',
+  },
 ];
 
 export const Header = () => {
