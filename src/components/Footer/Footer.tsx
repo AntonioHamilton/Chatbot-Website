@@ -9,7 +9,7 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__copyright}>Chatbot 🤖 {currentYear}</div>
+      <div className={styles.footer__copyright}>Chat 🤖 {currentYear}</div>
       <div className={styles.footer__socials}>
         <a
           href="https://www.linkedin.com/in/antonio-hamilton/"

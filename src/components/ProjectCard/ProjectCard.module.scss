@@ -40,6 +40,10 @@
     transition: color 0.2s ease-in-out;
     cursor: pointer;
 
+    @media (max-width: variables.$sm) {
+      justify-self: center;
+    }
+
     &:hover {
       color: variables.$gold-400;
     }
