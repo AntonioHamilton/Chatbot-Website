@@ -22,6 +22,10 @@ $twinkle-base-duration: 16s;
   left: 0;
   width: 100vw;
   height: 100vh;
+
+  @supports (height: 100dvh) {
+    height: 100dvh; /* browsers modernos */
+  }
   background-color: variables.$background-primary;
   overflow: hidden;
 

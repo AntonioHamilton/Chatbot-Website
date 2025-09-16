@@ -2,6 +2,9 @@
 
 .projects {
   min-height: 73vh;
+  @supports (height: 73dvh) {
+    min-height: 73dvh; /* browsers modernos */
+  }
   margin-top: 32px;
   margin-bottom: 32px;
   padding: 0% 5%;

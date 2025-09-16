@@ -2,6 +2,9 @@
 
 .about {
   min-height: 82vh;
+  @supports (height: 82dvh) {
+    min-height: 82dvh; /* browsers modernos */
+  }
   padding: 0% 5%;
   display: flex;
   flex-direction: column;
@@ -28,6 +31,9 @@
     flex-direction: column;
     position: fixed;
     top: 17vh;
+    @supports (height: 17dvh) {
+      top: 17dvh; /* browsers modernos */
+    }
     width: 35%;
     text-align: left;
 
