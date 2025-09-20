@@ -3,6 +3,14 @@ import { Project } from 'src/types/Project';
 export const projects: Record<string, Project[]> = {
   EN_US: [
     {
+      title: 'Teatro Esporte',
+      description: `This is the official website for the Teatro Esporte Club, an improvisation school based in Aracaju, Brazil. The project is built with Next.js and showcases the school's classes, workshops, and shows.`,
+      image: '/images/projects/teatro-esporte.jpg',
+      link: 'https://teatro-esporte.vercel.app/',
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
+      github: 'https://github.com/AntonioHamilton/teatro-esporte',
+    },
+    {
       title: 'Anotei',
       description:
         'Pop culture content management app that helps users organize and track their favorite TV shows, movies, anime, and books all in one place',
@@ -46,6 +54,14 @@ export const projects: Record<string, Project[]> = {
     },
   ],
   PT_BR: [
+    {
+      title: 'Teatro Esporte',
+      description: `Este é o site oficial do Clube Teatro Esporte, uma escola de improvisação com sede em Aracaju, Brasil. O projeto foi construído com Next.js e apresenta as aulas, workshops e shows da escola.`,
+      image: '/images/projects/teatro-esporte.jpg',
+      link: 'https://teatro-esporte.vercel.app/',
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
+      github: 'https://github.com/AntonioHamilton/teatro-esporte',
+    },
     {
       title: 'Anotei',
       description:
