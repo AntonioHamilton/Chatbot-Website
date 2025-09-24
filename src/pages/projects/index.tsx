@@ -10,7 +10,33 @@ const Projects = () => {
   return (
     <div className={styles.projects}>
       <Head>
-        <title>Projects</title>
+        <title>Meus Projetos - Antônio Hamilton (Chat)</title>
+        <meta
+          name="description"
+          content="Confira os projetos de desenvolvimento de Antônio Hamilton, incluindo sites, aplicativos e estudos de caso em IA."
+        />
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Projetos - Portfólio de Antônio Hamilton"
+        />
+        <meta
+          property="og:description"
+          content="Explore uma coleção de projetos de desenvolvimento, de aplicações web a sistemas de IA."
+        />
+        <meta
+          property="og:url"
+          content="https://chat-hamilton.vercel.app/projects"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://chat-hamilton.vercel.app/favicon.ico"
+        />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main>
         {projects[language].map((project) => (
