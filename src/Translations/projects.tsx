@@ -3,9 +3,21 @@ import { Project } from 'src/types/Project';
 export const projects: Record<string, Project[]> = {
   EN_US: [
     {
+      title: 'RPG Master Plan',
+      description:
+        'A desktop app for running tabletop RPG sessions: an infinite canvas to map scenes with notes, NPCs, clocks and timers linked by arrows, plus a bestiary that procedurally generates monsters (same name, same stats, every time).',
+      image: '/images/projects/rpg-master-plan.png',
+      gif: '/images/projects/rpg-master-plan.gif',
+      link: 'https://github.com/AntonioHamilton/RPG-Master-Plan',
+      badges: ['Electron', 'Vite', 'React', 'TypeScript'],
+      github: 'https://github.com/AntonioHamilton/RPG-Master-Plan',
+    },
+    {
       title: 'Teatro Esporte',
-      description: `This is the official website for the Teatro Esporte Club, an improvisation school based in Aracaju, Brazil. The project is built with Next.js and showcases the school's classes, workshops, and shows.`,
+      description:
+        'The official site for Teatro Esporte, an improv theater school in Aracaju, Brazil. Classes, workshops, and shows, all in one place.',
       image: '/images/projects/teatro-esporte.jpg',
+      gif: '/images/projects/teatro-esporte.gif',
       link: 'https://teatro-esporte.vercel.app/',
       badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
       github: 'https://github.com/AntonioHamilton/teatro-esporte',
@@ -13,8 +25,9 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Anotei',
       description:
-        'Pop culture content management app that helps users organize and track their favorite TV shows, movies, anime, and books all in one place',
+        "A pop-culture tracker so you stop losing track of what you're watching, reading, and playing — shows, movies, anime, and books in one app.",
       image: '/images/projects/anotei.png',
+      gif: '/images/projects/anotei.gif',
       link: 'https://anotei-ten.vercel.app/',
       badges: ['React Native', 'TypeScript', 'Styled-Components', 'Expo'],
       github: 'https://github.com/AntonioHamilton/Anotei',
@@ -22,7 +35,7 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Money Legends',
       description:
-        'Created for the final project of the Information Systems course. It is a software engineering and AI project that aims to evaluate the win rate of League of Legends teams. It does this using a regressive random forest (a machine learning algorithm)',
+        "My college capstone: a machine learning model (random forest) that predicts League of Legends match win rates. Nerded out on stats so you don't have to.",
       image: '/images/projects/moneylegends.png',
       link: 'https://money-legends.vercel.app/login',
       badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
@@ -31,8 +44,9 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Universe Project',
       description:
-        "This was a project designed for my university's database classes. I worked on it with my friend Yves, and the main proposal was to display planets, stars, and moons in our galaxy",
+        'A database-class project built with my friend Yves: a tiny galaxy simulator showing planets, stars, and moons.',
       image: '/images/projects/universeproject.png',
+      gif: '/images/projects/universeproject.gif',
       link: 'https://universeproject.vercel.app/',
       badges: ['React', 'MongoDB', 'Node.js', 'Express.js'],
       github: '',
@@ -40,24 +54,30 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Ioasys Challenge',
       description:
-        "Project developed for the Ioasys Company challenge interview. The idea was to create a login page and a book catalog on the app's home screen",
+        'A take-home job interview challenge: login screen + book catalog, built to show what I could do under a deadline.',
       image: '/images/projects/ioasyschallenge.png',
       link: 'https://desafio-books-frontend-omega.vercel.app/',
-      badges: [
-        'NextJS',
-        'TypeScript',
-        'Styled-Components',
-        'REST API',
-        'Vercel',
-      ],
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'REST API'],
       github: '',
     },
   ],
   PT_BR: [
     {
+      title: 'RPG Master Plan',
+      description:
+        'App desktop pra planejar sessões de RPG de mesa: um canvas infinito pra mapear cenas com notas, NPCs, relógios e timers conectados por setas, mais um bestiário que gera monstros proceduralmente (mesmo nome, sempre os mesmos atributos).',
+      image: '/images/projects/rpg-master-plan.png',
+      gif: '/images/projects/rpg-master-plan.gif',
+      link: 'https://github.com/AntonioHamilton/RPG-Master-Plan',
+      badges: ['Electron', 'Vite', 'React', 'TypeScript'],
+      github: 'https://github.com/AntonioHamilton/RPG-Master-Plan',
+    },
+    {
       title: 'Teatro Esporte',
-      description: `Este é o site oficial do Clube Teatro Esporte, uma escola de improvisação com sede em Aracaju, Brasil. O projeto foi construído com Next.js e apresenta as aulas, workshops e shows da escola.`,
+      description:
+        'Site oficial do Teatro Esporte, escola de teatro de improviso em Aracaju. Aulas, workshops e espetáculos, tudo num lugar só.',
       image: '/images/projects/teatro-esporte.jpg',
+      gif: '/images/projects/teatro-esporte.gif',
       link: 'https://teatro-esporte.vercel.app/',
       badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
       github: 'https://github.com/AntonioHamilton/teatro-esporte',
@@ -65,8 +85,9 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Anotei',
       description:
-        'Aplicativo gratuito de gerenciamento de conteúdo da cultura pop que ajuda os usuários a organizar e acompanhar seus programas de TV, filmes, animes e livros favoritos em um só lugar',
+        'Um app pra parar de esquecer o que você tá assistindo, lendo e jogando — séries, filmes, animes e livros, tudo organizado num lugar só.',
       image: '/images/projects/anotei.png',
+      gif: '/images/projects/anotei.gif',
       link: 'https://anotei-ten.vercel.app/',
       badges: ['React Native', 'TypeScript', 'Styled-Components', 'Expo'],
       github: 'https://github.com/AntonioHamilton/Anotei',
@@ -74,7 +95,7 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Money Legends',
       description:
-        'Criado para o trabalho de conclusão do curso de Sistemas de Informação. É um projeto de engenharia de software e IA que tem como objetivo avaliar a taxa de vitória de times de League of Legends, ele faz isso a partir de um random forest regressivo (algoritmo de machine learning)',
+        'TCC da faculdade: um modelo de machine learning (random forest) que prevê a taxa de vitória de partidas de League of Legends. Nerdei nas estatísticas pra você não precisar.',
       image: '/images/projects/moneylegends.png',
       link: 'https://money-legends.vercel.app/login',
       badges: ['NextJS', 'TypeScript', 'Styled-Components', 'Vercel'],
@@ -83,8 +104,9 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Universe Project',
       description:
-        'Este foi um projeto desenvolvido para as aulas de banco de dados na minha universidade. Fiz em parceria com meu amigo Yves, e a proposta principal era exibir planetas, estrelas e luas da nossa galáxia',
+        'Projeto da faculdade (banco de dados) feito com meu amigo Yves: um mini simulador de galáxia com planetas, estrelas e luas.',
       image: '/images/projects/universeproject.png',
+      gif: '/images/projects/universeproject.gif',
       link: 'https://universeproject.vercel.app/',
       badges: ['React', 'MongoDB', 'Node.js', 'Express.js'],
       github: '',
@@ -92,16 +114,10 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Ioasys Challenge',
       description:
-        'Projeto desenvolvido para a entrevista de desafio da empresa Ioasys. A ideia era criar uma página de login e um catálogo de livros na página inicial do sistema web',
+        'Desafio técnico de entrevista de emprego: tela de login + catálogo de livros, feito pra mostrar serviço sob prazo apertado.',
       image: '/images/projects/ioasyschallenge.png',
       link: 'https://desafio-books-frontend-omega.vercel.app/',
-      badges: [
-        'NextJS',
-        'TypeScript',
-        'Styled-Components',
-        'API REST',
-        'Vercel',
-      ],
+      badges: ['NextJS', 'TypeScript', 'Styled-Components', 'API REST'],
       github: '',
     },
   ],

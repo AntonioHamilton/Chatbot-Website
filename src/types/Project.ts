@@ -5,6 +5,7 @@ export type Project = {
   link: string;
   description: ReactNode;
   image: string;
+  gif?: string;
   badges: string[];
   github?: string;
 };

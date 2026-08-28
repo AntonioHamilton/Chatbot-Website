@@ -1,23 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useTranslation } from 'src/hooks/useTranslation';
 import styles from './Header.module.scss';
-import { FloatingMenu } from '../FloatingMenu/FloatingMenu';
 
 const navLinks: Record<string, any>[] = [
-  { name: { PT_BR: 'Início', EN_US: 'Home' }, path: '/' },
-  { name: { PT_BR: 'Sobre', EN_US: 'About' }, path: '/about' },
-  { name: { PT_BR: 'Projetos', EN_US: 'Projects' }, path: '/projects' },
-  {
-    name: { PT_BR: '4Fun', EN_US: '4Fun' },
-    path: 'https://chat-4-fun.vercel.app/',
-  },
+  { name: { PT_BR: 'Sobre', EN_US: 'About' }, path: '/#about' },
+  { name: { PT_BR: 'Skills', EN_US: 'Skills' }, path: '/#skills' },
+  { name: { PT_BR: 'Projetos', EN_US: 'Projects' }, path: '/#projects' },
+  { name: { PT_BR: 'Jogos', EN_US: 'Games' }, path: '/#games' },
+  { name: { PT_BR: 'Contato', EN_US: 'Contact' }, path: '/#contact' },
 ];
 
 export const Header = () => {
-  const router = useRouter();
   const { language } = useTranslation();
 
   const handleLanguageChange = (lang: string) => {
@@ -29,7 +24,13 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.header__logo}>
         <Link href="/">
-          <span>CHAT</span>
+          <Image
+            src="/images/logo.png"
+            alt="Chat"
+            width={100}
+            height={50}
+            priority
+          />
         </Link>
       </div>
 
@@ -37,14 +38,7 @@ export const Header = () => {
         <ul className={styles.header__navList}>
           {navLinks.map((link) => (
             <li key={link.path as string} className={styles.header__navItem}>
-              <Link
-                href={link.path}
-                className={`${styles.header__navLink} ${
-                  router.pathname === link.path
-                    ? styles['header__navLink--active']
-                    : ''
-                }`}
-              >
+              <Link href={link.path} className={styles.header__navLink}>
                 {link.name[language]}
               </Link>
             </li>
@@ -61,8 +55,8 @@ export const Header = () => {
           <Image
             src="/icons/br-flag.svg"
             alt="Mudar para Português"
-            width={25}
-            height={18}
+            width={20}
+            height={14}
           />
         </button>
         <button
@@ -73,13 +67,11 @@ export const Header = () => {
           <Image
             src="/icons/us-flag.svg"
             alt="Switch to English"
-            width={25}
-            height={18}
+            width={20}
+            height={14}
           />
         </button>
       </div>
-
-      <FloatingMenu path={router.pathname} />
     </header>
   );
 };

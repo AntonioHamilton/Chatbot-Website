@@ -1,21 +1,32 @@
 @use 'variables';
+@use 'mixins';
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 5%;
+  padding: 14px 5%;
   color: variables.$text-primary;
+  background-color: variables.$panel-bg;
+  border-bottom: 1px solid variables.$border-subtle;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  backdrop-filter: blur(6px);
 
   &__logo {
-    font-family: 'Londrina Sketch', cursive;
-    font-size: 2.2rem;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
 
     a {
-      color: variables.$text-primary;
-      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      height: 40px;
+      width: auto;
     }
   }
 
@@ -31,50 +42,22 @@
 
   &__navList {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     list-style: none;
   }
 
   &__navLink {
     color: variables.$text-secondary;
     text-decoration: none;
-    position: relative;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     padding: 0.25rem 0;
-    transition: color 0.3s ease-out;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease-out, border-color 0.2s ease-out;
 
     &:hover {
       color: variables.$text-primary;
-      &::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1.5px;
-      bottom: 0;
-      left: 0;
-      background-color: variables.$gold-400;
-      transform: scaleX(0);
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-
-    &--active {
-      color: variables.$gold-400;
-
-      &::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-
-      &:hover {
-        color: variables.$gold-400;
-      }
+      border-color: variables.$gold-500;
     }
   }
 
@@ -85,14 +68,17 @@
 
   &__languageButton {
     background: none;
-    border: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 4px;
+    line-height: 0;
     cursor: pointer;
-    padding: 0;
-    transition: filter 0.2s ease-in-out;
-    filter: brightness(0.7);
+    filter: brightness(0.75);
+    transition: filter 0.2s ease-out, border-color 0.2s ease-out;
 
     &:hover {
       filter: brightness(1);
+      border-color: variables.$border-subtle;
     }
   }
 }

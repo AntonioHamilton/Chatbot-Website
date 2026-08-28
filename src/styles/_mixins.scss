@@ -1,0 +1,64 @@
+@use 'variables';
+
+// Painel "elevado" tipo card da Steam: fundo levemente mais claro, borda sutil, sombra suave
+@mixin store-panel($hoverable: false) {
+  background-color: variables.$card-bg;
+  border: 1px solid variables.$border-subtle;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px variables.$shadow-color;
+
+  @if $hoverable {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+      transform 0.2s ease-out;
+
+    &:hover {
+      background-color: variables.$card-bg-hover;
+      border-color: variables.$gold-500;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Tag de gênero/skill, no estilo das badges de tag da Steam:
+// fundo escuro sólido, borda sutil, texto claro
+@mixin store-tag($color: variables.$gold-400) {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 3px;
+  background-color: variables.$background-secondary;
+  border: 1px solid rgba($color, 0.4);
+  color: $color;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+// Botão de call-to-action, tipo "Jogar agora" / "Adicionar ao carrinho"
+@mixin store-button($color: variables.$gold-500) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 3px;
+  border: none;
+  background-color: $color;
+  color: variables.$background-primary;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: filter 0.15s ease-out, transform 0.15s ease-out;
+
+  &:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+}
+
+@mixin section-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: variables.$gold-400;
+  margin-bottom: 24px;
+}

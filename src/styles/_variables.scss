@@ -25,3 +25,13 @@ $sm: 480px; // (smaller tablet viewpoints);
 $md: 768px; // (most tablets);
 $lg: 992px; // (smaller desktops);
 $xl: 1200px; // (large devices and wide screens);
+
+/* Store-front Theme */
+$font-base: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+
+$panel-bg: rgb(21 23 64 / 92%);
+$card-bg: rgb(6 14 38 / 72%);
+$card-bg-hover: rgb(6 14 38 / 85%);
+$border-subtle: rgb(255 255 255 / 10%);
+$shadow-color: rgb(0 0 0 / 35%);
+$overlay-bg: rgb(6 14 38 / 72%);

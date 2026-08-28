@@ -1,47 +1,250 @@
 @use 'variables';
+@use 'mixins';
+
+.sectionHeading {
+  @include mixins.section-heading;
+}
+
+.subHeading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: variables.$text-primary;
+  margin: 40px 0 16px;
+
+  @media (max-width: variables.$md) {
+    margin: 28px 0 12px;
+  }
+}
+
+.seeMoreButton {
+  @include mixins.store-button(variables.$gold-500);
+  margin-top: 16px;
+  border: none;
+  font-size: 0.9rem;
+}
 
 .home {
-  height: 82vh;
-  @supports (height: 82dvh) {
-    height: 82dvh; /* browsers modernos */
-  }
-  padding: 0% 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+// Todas as seções compartilham o mesmo ritmo de espaçamento e alinhamento
+.section {
+  padding: 72px 8%;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: variables.$md) {
+    padding: 40px 6%;
+  }
+}
+
+// ===== Hero / Sobre =====
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  @media (max-width: variables.$md) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  &__portraitWrapper {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &__portrait {
+    border-radius: 8px;
+    border: 1px solid variables.$border-subtle;
+    object-fit: cover;
+  }
+
+  &__trinket {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: variables.$panel-bg;
+    border: 1px solid variables.$border-subtle;
+    font-size: 1rem;
+
+    &--dice {
+      top: -10px;
+      right: -10px;
+      transform: rotate(8deg);
+    }
+
+    &--code {
+      bottom: -10px;
+      left: -10px;
+      transform: rotate(-8deg);
+    }
+  }
+
+  &__ribbon {
+    display: inline-block;
+    @include mixins.store-tag(variables.$gold-400);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: variables.$text-primary;
+    margin-bottom: 8px;
+  }
+
+  &__tagline {
+    color: variables.$gold-400;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+
+  &__about {
+    p {
+      color: variables.$text-secondary;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+
+      strong {
+        color: variables.$text-highlighted;
+      }
+    }
+  }
+}
+
+// ===== Skills =====
+.skills {
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  &__tag {
+    @include mixins.store-tag(variables.$gold-400);
+  }
+
+  &__achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+// ===== Projects / Biblioteca =====
+.projects {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 36px;
+    margin-bottom: 20px;
+    align-items: start;
+
+    @media (max-width: variables.$lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: variables.$sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ===== Jogos / Chat 4 Fun =====
+.games {
+  &__panel {
+    @include mixins.store-panel;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px;
+    background: linear-gradient(
+      135deg,
+      rgba(variables.$purple-500, 0.55) 0%,
+      rgba(variables.$blue-500, 0.55) 100%
+    );
+
+    @media (max-width: variables.$md) {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px;
+    }
+  }
+
+  &__description {
+    color: variables.$text-secondary;
+    max-width: 480px;
+  }
+
+  &__cta {
+    @include mixins.store-button(variables.$gold-500);
+    flex-shrink: 0;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+// ===== Comunidade =====
+.contact {
   text-align: center;
 
-  &__title {
-    color: variables.$text-primary;
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-family: 'Wendy One';
+  &__description {
+    color: variables.$text-secondary;
+    margin-bottom: 24px;
   }
 
   &__links {
     display: flex;
+    align-items: center;
     gap: 16px;
-
-    @media (max-width: variables.$md) {
-      display: none;
-    }
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__link {
-    background: rgba(0, 255, 170, 0.15);
-    color: #00ffaa;
-    border-radius: 20px;
-    padding: 8px 16px;
-    box-shadow:
-      1px 1px 2px rgba(0, 255, 170, 0.25),
-      -1px -1px 2px rgba(0, 0, 0, 0.2);
+    @include mixins.store-panel($hoverable: true);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    color: variables.$text-primary;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+  }
 
-    &:hover {
-      background: rgba(0, 255, 170, 0.253);
-    }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__email {
+    display: block;
+    margin-top: 20px;
+    color: variables.$text-secondary;
+    font-size: 0.95rem;
+  }
+
+  &__copyright {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid variables.$border-subtle;
+    color: variables.$text-tertiary;
+    font-size: 0.8rem;
   }
 }
