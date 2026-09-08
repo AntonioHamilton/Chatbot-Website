@@ -5,7 +5,7 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Claude Devkit',
       description:
-        'A kit of skills, agents, scripts and MCP for AI-assisted development. The manager runs a 12-step pipeline — recon, spec, approval gate, staged implementation and review — so a feature ships without the agent freelancing.',
+        'A kit of skills, agents, scripts and MCP for AI-assisted development. It runs on Claude Code and, with a path tweak, on any harness that reads instruction files.',
       image: '/images/projects/developer-capivara.jpg',
       link: 'https://github.com/AntonioHamilton/claude-devkit',
       badges: ['Claude Code', 'Skills', 'Subagents', 'MCP'],
@@ -74,7 +74,7 @@ export const projects: Record<string, Project[]> = {
     {
       title: 'Claude Devkit',
       description:
-        'Kit de skills, agents, scripts e MCP pra desenvolvimento assistido por IA. O manager toca um pipeline de 12 etapas — recon, spec, aprovação, implementação por estágios e revisão — pra feature sair pronta sem o agent inventar moda.',
+        'Kit de skills, agents, scripts e MCP para desenvolvimento assistido por IA. Funciona no Claude Code e, com adaptação de caminho, em qualquer harness que leia arquivos de instrução.',
       image: '/images/projects/developer-capivara.jpg',
       link: 'https://github.com/AntonioHamilton/claude-devkit',
       badges: ['Claude Code', 'Skills', 'Subagents', 'MCP'],
