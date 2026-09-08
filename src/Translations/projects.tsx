@@ -3,6 +3,15 @@ import { Project } from 'src/types/Project';
 export const projects: Record<string, Project[]> = {
   EN_US: [
     {
+      title: 'Claude Devkit',
+      description:
+        'A kit of skills, agents, scripts and MCP for AI-assisted development. The manager runs a 12-step pipeline — recon, spec, approval gate, staged implementation and review — so a feature ships without the agent freelancing.',
+      image: '/images/projects/developer-capivara.jpg',
+      link: 'https://github.com/AntonioHamilton/claude-devkit',
+      badges: ['Claude Code', 'Skills', 'Subagents', 'MCP'],
+      github: 'https://github.com/AntonioHamilton/claude-devkit',
+    },
+    {
       title: 'RPG Master Plan',
       description:
         'A desktop app for running tabletop RPG sessions: an infinite canvas to map scenes with notes, NPCs, clocks and timers linked by arrows, plus a bestiary that procedurally generates monsters (same name, same stats, every time).',
@@ -62,6 +71,15 @@ export const projects: Record<string, Project[]> = {
     },
   ],
   PT_BR: [
+    {
+      title: 'Claude Devkit',
+      description:
+        'Kit de skills, agents, scripts e MCP pra desenvolvimento assistido por IA. O manager toca um pipeline de 12 etapas — recon, spec, aprovação, implementação por estágios e revisão — pra feature sair pronta sem o agent inventar moda.',
+      image: '/images/projects/developer-capivara.jpg',
+      link: 'https://github.com/AntonioHamilton/claude-devkit',
+      badges: ['Claude Code', 'Skills', 'Subagents', 'MCP'],
+      github: 'https://github.com/AntonioHamilton/claude-devkit',
+    },
     {
       title: 'RPG Master Plan',
       description:
