@@ -3,6 +3,15 @@ import { Project } from 'src/types/Project';
 export const projects: Record<string, Project[]> = {
   EN_US: [
     {
+      title: 'Capivara Política',
+      description:
+        'A quiz that finds your political profile and shows which 2026 election candidate fits you best, with sourced research on votes, proposals and controversies.',
+      image: '/images/projects/capivara-politica.jpg',
+      link: 'https://capivara-politica.vercel.app/',
+      badges: ['React', 'Vite', 'TypeScript', 'Vercel'],
+      github: '',
+    },
+    {
       title: 'Claude Devkit',
       description:
         'A kit of skills, agents, scripts and MCP for AI-assisted development. It runs on Claude Code and, with a path tweak, on any harness that reads instruction files.',
@@ -71,6 +80,15 @@ export const projects: Record<string, Project[]> = {
     },
   ],
   PT_BR: [
+    {
+      title: 'Capivara Política',
+      description:
+        'Um quiz que descobre seu perfil político e mostra qual candidato das eleições de 2026 mais combina com você, com pesquisas com fonte sobre votos, propostas e polêmicas.',
+      image: '/images/projects/capivara-politica.jpg',
+      link: 'https://capivara-politica.vercel.app/',
+      badges: ['React', 'Vite', 'TypeScript', 'Vercel'],
+      github: '',
+    },
     {
       title: 'Claude Devkit',
       description:
