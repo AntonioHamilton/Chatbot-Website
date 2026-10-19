@@ -153,7 +153,7 @@ export const Home = () => {
               </p>
             </div>
             <a
-              href="https://chat-4-fun.vercel.app/"
+              href={`https://chat-4-fun.vercel.app/?language=${language === 'PT_BR' ? 'pt' : 'en'}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.games__cta}
